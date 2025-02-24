@@ -3,11 +3,11 @@ import numpy as np
 import pandas as pd
 
 df = pd.DataFrame(
-{  "a" : [4, 5, 6],
-        "b" : [7, 8, 9],
-        "c" : [10, 11, 12]},    )
-#index는 행에 대한 index 역할을 함.
-#딕셔너리의 키들은 열에 대한 이름 역할을 함.
+        [[4, 7, 10],
+        [5, 8, 11],
+        [6, 9, 12]] , index=[1, 2, 3],columns=['a', 'b', 'c']
+)
+#columns 설정 안하면 index 설정 안했을 때와 마찬가지로 0 1 2가 디폴트로 설정됨
+
 print(df)
 
-#index = [1, 2, 3]를 제거할 경우 0 1 2로 시작함.
