@@ -21,9 +21,11 @@ y = ls[["Life satisfaction"]].values
 
 
 # 모델 선택
-# model = LinearRegression() #LinearRegression 모델
-model = KNeighborsRegressor(n_neighbors=3) # KNeighborsRegressor 모델
+# model = LinearRegression() #LinearRegression 모델 <- 선형 회귀 모델
+model = KNeighborsRegressor(n_neighbors=3) # KNeighborsRegressor 모델 <- k-최근접 이웃 모델
 
+
+#모델을 훈련하는 명령어
 model.fit(X,y)
 
 # X_new = [[37655.2]] # 예측해서 x에 넣을 값
