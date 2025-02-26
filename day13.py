@@ -1,10 +1,20 @@
-import pandas as pd
+class Pokemon:
+    def __init__(self,name):
+        self.name = name
 
-data = [1, 7, 5, 2, 8, 3, 6, 4]
+    def walks(self,name):
+        print("walk..")
+    def attack(self, target_pokemon):
+        print(f"{self.name} attack {target_pokemon.name} !")
 
-bins = [0, 3, 6, 9]
 
-lables = ["low", "mid", "high"]
+class Pikachu(Pokemon):
+    pass
 
-cat = pd.cut(data, bins, labels = lables, right = False)
-print(cat)
+class Agumon:
+    def __init__(self,name):
+        self.name = name
+
+agumon = Agumon('아구몬')
+pikachu = Pikachu('피카츄')
+pikachu.attack(agumon)
